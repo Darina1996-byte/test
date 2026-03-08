@@ -1,0 +1,18 @@
+from address import Address
+
+class Mailing:
+    def __init__(self, to_address, from_address, cost, track):
+        self.to_address = to_address
+        self.from_address = from_address
+        self.cost = cost
+        self.track = track
+
+    def __repr__(self):
+        return (
+            f"Отправление {self.track}"
+            f" из {self.from_address.index}, {self.from_address.city}, "
+            f"{self.from_address.street}, дом {self.from_address.house} - кв.{self.from_address.apartment}"
+            f" В {self.to_address.index}, {self.to_address.city}, "
+            f"{self.to_address.street}, дом {self.to_address.house} - кв.{self.to_address.apartment}"
+            f" Стоимость доставки: {self.cost:.2f} руб."
+        )
